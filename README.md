@@ -1,8 +1,6 @@
 # Microproyecto 2 - Computacion en la Nube (AKS)
 
-Universidad Autonoma de Occidente - Ingenieria en Datos e Inteligencia Artificial
-Autor: Luz Angela Carabali Mulato (Luzza)
-Profesor: Oscar H. Mondragon
+Universidad Autonoma de Occidente 
 
 Implementacion de un cluster de Kubernetes en Azure (AKS), despliegue de una
 aplicacion de clasificacion de imagenes, una aplicacion de interes, monitoreo,
