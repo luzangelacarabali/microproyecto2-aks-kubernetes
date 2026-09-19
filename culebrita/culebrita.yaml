@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: culebrita
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: culebrita
+  template:
+    metadata:
+      labels:
+        app: culebrita
+    spec:
+      containers:
+        - name: culebrita
+          image: acrmicroproyecto2grupo.azurecr.io/culebrita:v1
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits:
+              cpu: "100m"
+              memory: "128Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: culebrita
+spec:
+  type: ClusterIP
+  selector:
+    app: culebrita
+  ports:
+    - port: 80
+      targetPort: 80
